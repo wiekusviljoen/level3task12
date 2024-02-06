@@ -11,8 +11,7 @@ COPY . /app
 RUN pip install -r requirements.txt && \
     python -m spacy download en_core_web_sm
 
-# Define environment variable
-ENV PYTHONUNBUFFERED=1
+
 
 # Run the Python script when the container launches
 CMD ["python", "semantic.py"]
